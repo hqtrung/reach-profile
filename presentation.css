@@ -1,0 +1,204 @@
+body {
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    background-color: #020617;
+}
+
+#presentation-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.presentation-slide {
+    position: absolute !important;
+    inset: 0 !important;
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.8s !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+    overflow: hidden;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.presentation-slide:first-child {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.presentation-slide.layout-fullscreen { padding: 0; }
+.presentation-slide.layout-spacious { padding: 8vw; }
+.presentation-slide.layout-split { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 1024px) {
+    .presentation-slide.layout-split { grid-template-columns: 1fr 1fr; padding: 0; }
+}
+
+/* Slide 6: Ecosystem styles */
+.ecosystem-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #1f2937;
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+}
+.ecosystem-item .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 8px;
+}
+.ecosystem-item .icon-wrapper i { color: #2563eb; width: 28px; height: 28px; }
+.ecosystem-item p { font-weight: 700; font-size: 1rem; }
+.ecosystem-item span { font-size: 0.8rem; color: #4b5563; }
+
+.item-1 { transform: rotate(0deg) translate(220px) rotate(0deg); }
+.item-2 { transform: rotate(72deg) translate(220px) rotate(-72deg); }
+.item-3 { transform: rotate(144deg) translate(220px) rotate(-144deg); }
+.item-4 { transform: rotate(216deg) translate(220px) rotate(-216deg); }
+.item-5 { transform: rotate(288deg) translate(220px) rotate(-288deg); }
+
+@media (max-width: 768px) {
+    .ecosystem-item { width: 100px; height: 100px; }
+    .ecosystem-item .icon-wrapper { width: 50px; height: 50px; }
+    .item-1 { transform: rotate(0deg) translate(160px) rotate(0deg); }
+    .item-2 { transform: rotate(72deg) translate(160px) rotate(-72deg); }
+    .item-3 { transform: rotate(144deg) translate(160px) rotate(-144deg); }
+    .item-4 { transform: rotate(216deg) translate(160px) rotate(-216deg); }
+    .item-5 { transform: rotate(288deg) translate(160px) rotate(-288deg); }
+}
+
+/* Slide 8: Methodology Flow */
+.methodology-flow-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+.methodology-flow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 1100px;
+    padding: 1rem 0;
+}
+.flow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+.flow-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+    background-color: #e0e7ff;
+    color: #3730a3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border: 2px solid #c7d2fe;
+    transition: all 0.3s ease;
+}
+.flow-item.go-live .flow-number {
+    background-color: #dcfce7;
+    color: #166534;
+    border-color: #bbf7d0;
+}
+.flow-content {
+    margin-top: 12px;
+}
+.flow-content h3 {
+    font-weight: 600;
+    color: #1f2937;
+}
+.flow-content p {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+.flow-arrow {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    color: #9ca3af;
+}
+
+/* Slide 12: Client Logos */
+.client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-color: #e5e7eb;
+    color: #4b5563;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+.client-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    background-color: #f3f4f6;
+    transform: scale(1.05);
+}
+
+/* Slide 14: Step cards */
+.step-card {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.step-number {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1.5rem;
+    background: #dbeafe;
+    color: #1e40af;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 2px solid #bfdbfe;
+}
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+.step-description {
+    color: #4b5563;
+}

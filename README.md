@@ -143,7 +143,6 @@ Note: The form currently shows a success message but doesn't actually send email
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 

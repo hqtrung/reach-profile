@@ -1,0 +1,48 @@
+{
+  "name": "reach-profile",
+  "version": "1.0.0",
+  "description": "Modern responsive company profile presentation website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "dev:node": "npx http-server -p 8000 -c-1 -o",
+    "dev:php": "php -S localhost:8000",
+    "preview": "vercel dev",
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel",
+    "inspect": "vercel inspect",
+    "logs": "vercel logs",
+    "status": "vercel ls",
+    "domains": "vercel domains ls",
+    "lint:html": "npx htmlhint *.html",
+    "lint:css": "npx stylelint *.css",
+    "optimize:images": "echo 'Add image optimization script here'",
+    "build": "echo 'Static site - no build step required'",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "company-profile",
+    "static-website",
+    "responsive",
+    "vercel",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "hqtrung",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hqtrung/reach-profile.git"
+  },
+  "homepage": "https://reach-profile-5hirvub1i-hqtrungs-projects.vercel.app",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
+  },
+  "vercel": {
+    "version": 2
+  }
+}

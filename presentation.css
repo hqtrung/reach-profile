@@ -149,20 +149,9 @@ body {
     align-items: center;
     justify-content: center;
     height: 80px;
-    background-color: #e5e7eb;
-    color: #4b5563;
     border-radius: 0.5rem;
     font-weight: 600;
     font-size: 1.25rem;
-    transition: all 0.3s ease;
-    filter: grayscale(100%);
-    opacity: 0.7;
-}
-.client-logo:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-    background-color: #f3f4f6;
-    transform: scale(1.05);
 }
 
 /* Slide 14: Step cards */
